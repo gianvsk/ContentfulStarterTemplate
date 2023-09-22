@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Urbanist;
+    src: url('/fonts/Urbanist-ExtraLight.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Urbanist;
+    src: url('/fonts/Urbanist-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Urbanist;
+    src: url('/fonts/Urbanist-SemiBold.ttf');
+    font-weight: 600;
+}
