@@ -1,66 +1,3 @@
-export type heroDataType = {
-  data: {
-    postCollection: {
-      items: [
-        {
-          author: {
-            name: string;
-            picture: {
-              url: string;
-            };
-          };
-          date: string;
-          images: {
-            url: string;
-          };
-          text: undefined;
-          title: string;
-        }
-      ];
-    };
-  };
-};
-
-export type articleDataType = {
-  data: {
-    articolListCollection: {
-      items: {
-        title: string;
-        paragraph: string;
-        image: {
-          url: string;
-        };
-        articlesCollection: {
-          items: {
-            tItle: string;
-            text: string;
-            image: {
-              url: string;
-            };
-          }[];
-        };
-        postsCollection: {
-          items: {
-            title: string;
-            text: string;
-            id: string;
-            author: {
-              name: string;
-              picture: {
-                url: string;
-              };
-            };
-            date: string;
-            images: {
-              url: string;
-            }[];
-          }[];
-        };
-      }[];
-    };
-  };
-};
-
 export type PageData = {
   dataFromApi: {
     data: {
@@ -68,8 +5,8 @@ export type PageData = {
         items: {
           image: {
             url: string;
-          }
-          paragraph:string
+          };
+          paragraph: string;
           articlesCollection: {
             items: {
               tItle: string;
@@ -137,4 +74,51 @@ export type SectionData = {
   }[];
 }
 
-export const 
+export type heroPostData = {
+  postData: {
+    data: {
+      postCollection: {
+        items: [
+          {
+            title: string;
+            images: {
+              url: string;
+            };
+            author: {
+              name: string;
+              picture: {
+                url: string;
+              };
+            };
+            text: string | null;
+            date: string;
+            id: string;
+          }
+        ];
+      };
+    };
+  };
+  dataHero: {
+    data: {
+      postCollection: {
+        items: [
+          {
+            title: string;
+            images: {
+              url: string;
+            };
+            author: {
+              name: string;
+              picture: {
+                url: string;
+              };
+            };
+            text: string | null;
+            date: string;
+            id: string;
+          }
+        ];
+      };
+    };
+  };
+};

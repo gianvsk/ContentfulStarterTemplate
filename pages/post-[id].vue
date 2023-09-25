@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import { heroDataType, articleDataType, PageData} from '../types/types'
-
-type realDataFromApi = {
-    dataHero: heroDataType
-    articleData: articleDataType
-}
+import {PageData} from '../types/types'
 
 const route = useRoute()
 
@@ -22,20 +17,6 @@ const getDataArticles = computed(() => {
 const getPosts = computed(() => {
     return data ? data.value?.dataFromApi.data.pageCollection.items[0].postsCollection.items.slice(1) : navigateTo('/error')
 })
-/* const {data, error} = await useFetch<realDataFromApi>(`/api/getPost/${route.params.id}`)
-if(error.value) navigateTo('/error')
-
-const getHeroData = computed(() => {
-    return data ? data.value?.dataHero?.data?.postCollection?.items[0] : navigateTo('/error')
-})
-
-const getDataArticles = computed(() => {
-    return data ? data.value?.articleData : navigateTo('/error')
-})
-
-const getPosts = computed(() => {
-    return data ? data.value?.articleData.data.articolListCollection.items[0].postsCollection.items : navigateTo('/error')
-}) */
 
 </script>
 
