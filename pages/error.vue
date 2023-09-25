@@ -4,6 +4,8 @@
 
 <template>
 
-<h1>Error page</h1>
+<div class="flex justify-center">
+<h1 class="mx-auto text-2xl font-urbanist font-semibold">Error. Page not found</h1>
+</div>
 
 </template>

@@ -5,8 +5,7 @@
 <template>
 
     <OrganismsHeaderBar/>
-    <div class="px-4 max-w-1440px xl:mx-auto">
-      <MoleculesSectionHeader title="Blog"/>
+    <div class="px-4 max-w-1440px xl:mx-auto mt-14"> 
       <NuxtPage/>
       <MoleculesTitleParagraph 
             title="about us" 

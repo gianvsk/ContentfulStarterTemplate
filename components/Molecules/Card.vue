@@ -10,7 +10,7 @@ const { data } = defineProps<CardProps>()
 
 <template>
     <NuxtLink :to="'/post-' + data.id" class="w-full h-full">
-        <UCard :ui="{ rounded: 'rounded-2xl', background: 'bg-white', body: { padding: 'p-0 sm:px-0 h-full' }, header: { padding: 'p-0 sm:px-0' }, footer: { padding: 'px-0 py-0 sm:px-0'} }"
+        <UCard :ui="{ rounded: 'rounded-2xl', background: 'bg-white', base: 'overflow-auto' , body: { padding: 'p-0 sm:px-0 h-full' }, header: { padding: 'p-0 sm:px-0' }, footer: { padding: 'px-0 py-0 sm:px-0'} }"
             class="h-full w-full flex flex-col drop-shadow-none border border-gray-300 rounded-2xl overflow-hidden shadow-lg">
             <template #header>
                 <img :src="data.images.url" class="w-full h-auto" />
@@ -21,9 +21,6 @@ const { data } = defineProps<CardProps>()
                 </h3>
                 <MoleculesIconTextDate :name="data.author.name" :picture="data.author.picture.url" :date="useDate(data.date)" />
             </div>
-            <template #footer>
-                
-            </template>
         </UCard>
     </NuxtLink>
 </template>

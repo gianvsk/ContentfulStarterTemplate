@@ -14,6 +14,7 @@ export default defineEventHandler(async (event) => {
     })
 
     if(dataFromApi.data.pageCollection.items.length < 1) return createError({status: 404, message: "Page not found"})
+
     return {
       dataFromApi
     }

@@ -22,6 +22,9 @@ export default {
         '864px': '864px',
         '97vw': '97vw'
       },
+      height: {
+        '560px': '560px'
+      },
       maxWidth: {
         '864px': '864px',
         '1440px': '1440px'

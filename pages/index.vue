@@ -17,8 +17,11 @@ const getHeroData = computed(() => {
 </script>
 
 <template>
+  <div>
+    <MoleculesSectionHeader title="Blog"/>
     <section class="flex flex-col">
         <OrganismsHero :data="getHeroData" title="Blog"/>
         <OrganismsCardWrapper :data="getData" title="Lastest articles"/>
     </section>
+  </div>
 </template>
